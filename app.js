@@ -2,6 +2,7 @@ const express = require('express');
 const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
 const { v4: uuidv4 } = require('uuid');
+require('dotenv').config()
 
 const app = express();
 
@@ -82,7 +83,5 @@ app.post('/reset-password', async (req, res) => {
 });
 
 
-const port = 9000;
-app.listen(port, () => {
-  console.log(`Server running on port ${port}`);
-});
+
+app.listen(process.env.PORT || 9000, () => console.log("Server started on localhost:9000"));
