@@ -84,4 +84,4 @@ app.post('/reset-password', async (req, res) => {
 
 
 
-app.listen(process.env.PORT || 9000, () => console.log("Server started on localhost:9000"));
+app.listen(PORT, () => console.log(`Server running on localhost:${PORT}`));
