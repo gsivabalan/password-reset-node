@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 
-const dbURI = 'mongodb://localhost:27017/password-reset-app';
+const dbURI = 'mongodb+srv://passwordreset:passwordreset000@passwordreset0.6eylrhs.mongodb.net/?retryWrites=true&w=majority';
 const mongoose = require('mongoose');
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true });
 
